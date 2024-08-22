@@ -1,0 +1,21 @@
+# Notification Service Configuration
+
+server:
+  applicationConnectors:
+    - type: http
+      port: 8080
+  adminConnectors:
+    - type: http
+      port: 8081
+
+# Twilio Configuration
+twilio:
+  accountSid: ${TWILIO_ACCOUNT_SID}
+  authToken: ${TWILIO_AUTH_TOKEN}
+  phoneNumber: ${TWILIO_PHONE_NUMBER}
+
+# Logging Configuration
+logging:
+  level: INFO
+  loggers:
+    com.example.notificationservice: DEBUG
